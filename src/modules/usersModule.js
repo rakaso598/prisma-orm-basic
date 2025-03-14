@@ -41,14 +41,14 @@ usersRouter.post("/log-in", async (req, res, next) => {
 /**
  * 전체 유저 목록 불러오기
  */
-userRouter.get("/", adminOnly, async(req,res,next)=>{
+userRouter.get("/", adminOnly, async (req, res, next) => {
   try {
     const users = await prisma.user.findMany();
 
-    res.json(users)
-  }catch(e) {
+    res.json(users);
+  } catch (e) {
     next(e);
   }
-})
+});
 
 export default usersRouter;
