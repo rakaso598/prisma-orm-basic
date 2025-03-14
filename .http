@@ -1,0 +1,48 @@
+### 유저 생성
+
+POST http://localhost:3013/users/sign-up
+Content-Type: application/json
+
+{
+  "email": "abcd@1234.com",
+  "password": "qwer1234"
+}
+
+### 비밀번호 틀리게 (그런 유저 없어요...)
+
+POST http://localhost:3013/users/log-in
+Content-Type: application/json
+
+{
+  "email": "abcd@1234.com",
+  "password": "qwer123"
+}
+
+### 상품 생성 (관리자아님)
+
+POST http://localhost:3013/products
+Content-Type: application/json
+
+{
+  "name": "할로윈 의상3",
+  "price": 20000
+}
+
+### 상품 생성 (관리자)
+
+POST http://localhost:3013/products
+Content-Type: application/json
+Authorization: I am admin
+
+{
+  "name": "할로윈 의상3",
+  "price": 20000
+}
+
+### 상품 목록 조회
+
+GET http://localhost:3013/products
+
+### 상품 하나만 조회
+
+GET http://localhost:3013/products/5
