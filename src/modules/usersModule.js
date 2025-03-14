@@ -44,7 +44,10 @@ usersRouter.post("/log-in", async (req, res, next) => {
  */
 usersRouter.get("/", adminOnly, async (req, res, next) => {
   try {
-    const users = await prisma.user.findMany({ omit: { password: true } });
+    const users = await prisma.user.findMany({
+      omit: { password: true },
+      include: { favoriteProduct: true },
+    });
 
     res.json(users);
   } catch (e) {
