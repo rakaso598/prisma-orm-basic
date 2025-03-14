@@ -1,5 +1,5 @@
 import express from "express";
-import prisma from "../db/client";
+import prisma from "../db/client.js";
 
 const ordersRouter = express.Router();
 
@@ -14,9 +14,9 @@ ordersRouter.post("/", (req, res, next) => {
       data: {
         userEmail,
         orderItem: {
-          createMany: [{ data: { productId: 1 } }, { productId: 2 }],
+          createMany: { data: [{ productId: 1 }, { productId: 2 }] },
         },
-        // 오더아이템을 포함해서 돌려주세요 -> 반환부
+        // 오더아이템을 포함해서 돌려주세요 -> 반환부y
         include: {
           // 오더아이템은 프로덕트를 포함해서 돌려주세요 -> 반환부
           orderItem: { include: { product: true } },

@@ -57,8 +57,7 @@ Authorization: I am admin
 GET http://localhost:5050/users
 Authorization: I am admin
 
-### 전체 유저 목록 불러오기
+### 주문하기 (orders)
 
-GET http://localhost:5050/users
-Authorization: I am admin
+POST http://localhost:5050/orders
 
