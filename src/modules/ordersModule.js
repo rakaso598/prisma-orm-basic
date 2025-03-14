@@ -10,7 +10,7 @@ ordersRouter.post("/", (req, res, next) => {
     // 읽을때도 연결해서 읽기 , 생성할때도 연결해서 생성
 
     // 주문을 생성할 때, 주문에 포함될 주문 Item을 같이 생성하고, 그 녀석들에다가 바로 Product를 연결할 수도 있음.
-    prisma.order.create({
+    const order = prisma.order.create({
       data: {
         userEmail,
         orderItem: {
