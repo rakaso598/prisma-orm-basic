@@ -47,7 +47,7 @@ GET http://localhost:3013/products
 
 GET http://localhost:3013/products/5
 
-### 상품 하나 삭제
+### 상품 하나 삭제 (Authorization: I am admin // 관리자만)
 
-Delete http://localhost:3013/products/5
+Delete http://localhost:3013/products/3
 Authorization: I am admin

@@ -65,7 +65,7 @@ productRouter.delete("/:id", adminOnly, async (req, res, next) => {
       where: { id: productId },
     });
 
-    res.json(product);
+    res.status(204).send("No Content");
   } catch (e) {
     next(e);
   }
