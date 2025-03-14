@@ -55,4 +55,20 @@ productRouter.get("/:id", async (req, res, next) => {
   }
 });
 
+/**
+ * 상품삭제
+ */
+productRouter.delete("/:id", adminOnly, async (req, res, next) => {
+  try {
+    const productId = Number(req.params.id);
+    const product = await prisma.product.delete({
+      where: { id: productId },
+    });
+
+    res.json(product);
+  } catch (e) {
+    next(e);
+  }
+});
+
 export default productRouter;

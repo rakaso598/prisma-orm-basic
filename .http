@@ -46,3 +46,8 @@ GET http://localhost:3013/products
 ### 상품 하나만 조회
 
 GET http://localhost:3013/products/5
+
+### 상품 하나 삭제
+
+Delete http://localhost:3013/products/5
+Authorization: I am admin
