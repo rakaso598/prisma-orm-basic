@@ -51,3 +51,9 @@ GET http://localhost:3013/products/5
 
 Delete http://localhost:3013/products/3
 Authorization: I am admin
+
+### 전체 유저 목록 불러오기
+
+GET http://localhost:3013/products
+Authorization: I am admin
+

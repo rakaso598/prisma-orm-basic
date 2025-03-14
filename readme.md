@@ -1,14 +1,14 @@
 ## 목표 : 프리즈마 사용법을 익히자.
 
-## PostgreSQL + SQLite + Prisma
+## `PostgreSQL` + `SQLite` + `Prisma`
 
-#### 깃 이그노어 : node_modules, prisma
+#### 깃 이그노어 : `node_modules`, `prisma`
 
-#### npm i -D @types/express nodemon
+#### `npm i -D @types/express nodemon`
 
 ---
 
-[프리즈마 퀵스타트 npm 명령어](https://www.prisma.io/docs/getting-started/quickstart-sqlite)
+[`프리즈마 퀵스타트 npm 명령어`](https://www.prisma.io/docs/getting-started/quickstart-sqlite)
 
 - schema.prisma에 User 모델 작성 -> npx prisma migrate dev -> migration.sql 생성됨.
 - npx prisma studio 실행.
@@ -19,8 +19,14 @@
 
 ### 미들웨어 목록
 
-- adminOnly
-- identifyMiddleware
+- adminOnly : 관리자가 아닐때 에러 발생
+- identifyMiddleware : 어드민이면 isAdmin을 true로 만듬
+
+---
+
+### 스키마 목록
+- user
+- product
 
 ---
 
@@ -46,7 +52,7 @@
 
 ---
 
-### findUnique 형태
+### `findUnique` 형태
 
 findUnique({ 조건 : { DB속성명 : 비교할값 }})
 findUnique({ where: { id: productId } })
