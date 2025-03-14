@@ -1,5 +1,6 @@
 import express from "express";
 import prisma from "../db/client.js";
+import adminOnly from "../middlewares/adminOnly.js";
 
 const usersRouter = express.Router();
 
@@ -41,7 +42,7 @@ usersRouter.post("/log-in", async (req, res, next) => {
 /**
  * 전체 유저 목록 불러오기
  */
-userRouter.get("/", adminOnly, async (req, res, next) => {
+usersRouter.get("/", adminOnly, async (req, res, next) => {
   try {
     const users = await prisma.user.findMany();
 
