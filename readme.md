@@ -1,6 +1,6 @@
 ## 목표 : 프리즈마 사용법을 익히자.
 
-### `PostgreSQL` + `SQLite` + `Prisma`
+### `SQLite` + `Prisma`
 
 ![image](https://github.com/user-attachments/assets/679f747a-10b0-4a42-aa7c-99cc92d2af5c)
 
